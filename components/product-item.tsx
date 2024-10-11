@@ -30,13 +30,11 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         margin: 8,
         height: 200,
-        backgroundColor: 'pink',
         flex: 1,
     },
     img:{
         width: '100%',
         height: '65%',
-        borderRadius: 10,
         backgroundColor: "#CCCCCC",
     },
     info:{
@@ -44,9 +42,10 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize: 12,
-        fontWeight: 'bold',
+        fontWeight: 'normal',
         marginBottom: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#292929'
 
     },
     description:{
