@@ -44,7 +44,7 @@ export default function Screen() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Link href={'/home'} asChild>
+            <Link href={'./(tabs)/(home)'} asChild>
                 <Pressable>
                     <Animated.View style={{
                         width: largura,

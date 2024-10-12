@@ -28,8 +28,8 @@ export const ProductItem = ({data}: Props) =>{
 const styles = StyleSheet.create({
     container:{
         flexDirection: 'column',
-        margin: 8,
         height: 200,
+        paddingHorizontal: 8,
         flex: 1,
     },
     img:{
