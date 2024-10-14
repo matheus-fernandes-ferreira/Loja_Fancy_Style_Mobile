@@ -7,6 +7,7 @@ export function Search() {
             <Feather name="search" size={24} color='#292929' />
             <TextInput
             placeholder='Pesquisar'
+            style={styles.placeholder}
             />
 
         </View>
@@ -33,5 +34,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2, // Opacidade da sombra (mais sutil)
         shadowRadius: 4,    // Raio da sombra (suavidade)
         elevation: 4,       // Para Android, define a elevação da sombra
+    },
+    placeholder:{
+        width: '100%',
     }
 })

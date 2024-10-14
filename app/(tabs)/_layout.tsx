@@ -1,15 +1,16 @@
 import { Tabs } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Entypo from '@expo/vector-icons/Entypo';
+import { Feather } from "@expo/vector-icons";
 
 export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
                 tabBarStyle: {
-                    backgroundColor: 'purple', // Cor de fundo da Tab Bar
+                    backgroundColor: '#a53e41', // Cor de fundo da Tab Bar
                 },
-                tabBarActiveTintColor: 'yellow', // Cor dos ícones ativos
+                tabBarActiveTintColor: '#f2d8cb', // Cor dos ícones ativos
                 tabBarInactiveTintColor: 'white', // Cor dos ícones inativos
             }}
         >
@@ -25,9 +26,9 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="(categories)"
                 options={{
-                    title: 'Início',
+                    title: 'Categorias',
                     headerShown: false,
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+                    tabBarIcon: ({ color }) => <Feather size={28} name="grid" color={color} />,
                 }}
             />
             <Tabs.Screen

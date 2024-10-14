@@ -18,16 +18,13 @@ export const CategoryItem = ({data}: Props) =>{
                 resizeMode="cover"
                 style={styles.image}
             />
-            <View style={styles.box}>
-                <Text style={styles.title}>{data.title}</Text>
-            </View>
+                {/* <Text style={styles.title}>{data.title}</Text> */}
         </Pressable>
     );
 }
 const styles = StyleSheet.create({
     container:{
         margin: 10,
-        backgroundColor: "#333333",
         borderRadius: 10,
         width: '100%',
         
@@ -37,21 +34,9 @@ const styles = StyleSheet.create({
         height: 150,
         borderRadius: 10
     },
-    bg:{
-        height: 150,
-        backgroundColor: "#000000",
-        opacity: 0.6,
-        borderRadius: 10,
-        marginTop: -150
-    },
-    box:{
-        height: 150,
-        marginTop: -150,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
+ 
     title:{
-        color: '#FFFFFF',
+        color: '#3b3535',
         fontSize: 24
     }
 })

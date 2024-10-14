@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ScrollView, StyleSheet, View, Image, Text } from "react-native";
+import { ScrollView, StyleSheet, View, Image, Text, Pressable } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 import { getProductById } from "../../services/product";
@@ -18,92 +18,83 @@ export default function Screen() {
     return (
         <SafeAreaView style={styles.container}>
             <Stack.Screen options={{ title: '' }} />
-            <ScrollView style={styles.area}>
+            <View style={styles.Content}>
                 <Image
                     style={styles.img}
                     source={{ uri: product.image }}
                     resizeMode="cover"
                 />
-                <Text style={styles.title}>{product.title}</Text>
-                <Text style={styles.description}>{product.description}</Text>
-                <View style={styles.priceArea}>
+                <View style={styles.info}>
+                    <Text style={styles.title}>{product.title}</Text>
+                    <Text style={styles.description}>{product.description}</Text>
                     <Text style={styles.price}>R$ {product.price.toFixed(2)}</Text>
+                    <Pressable style={styles.btnAdicionar}>
+                        <Text style={styles.txtAdicionar}>
+                            Adicionar ao carrinho
+                        </Text>
+                    </Pressable>
+
                 </View>
-            </ScrollView>
-            <View style={styles.buttonContainer}>
-                <Button
-                    title="comprar agora"
-                    onPress={comprar}
-                    
-                />
+
             </View>
-        </SafeAreaView>
+
+        </SafeAreaView >
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        width:'100%',
-        flex: 1,
-        backgroundColor:'#ffffff'
-        
-    },
-    area: {
-        
-        flex: 1,
-        width:'100%',
+        width: '100%',
+        height: '100%',
         padding: 10,
-        backgroundColor:'#fffffff'
+        backgroundColor: '#ffffff'
 
     },
-    buttonContainer: {
-        padding: 10,
-        alignItems: 'center', 
-        marginBottom:60
-    },
-    button: {
-        width: 150, // Define a largura do botão
-        height: 45, // Define a altura do botão
-        borderRadius: 8, // Bordas arredondadas
-        justifyContent: 'center', // Centraliza o texto verticalmente
-        alignItems: 'center', // Centraliza o texto horizontalmente
-        backgroundColor: '#007bff', 
-        marginBottom: 300
+    Content: {
+        width: '100%',
+        height: '100%',
     },
     img: {
         width: "100%",
-        height: 250,
+        height: '70%',
         borderRadius: 10,
         marginBottom: 20,
     },
-    title:{
+    info: {
+        width: "100%",
+        height: '30%',
+        gap: 5,
+    },
+    title: {
         fontSize: 16,
         fontWeight: 'bold',
         marginBottom: 10,
-        color:'#000A3E',
-        textAlign:'center'
+        color: '#a53e41',
+        textAlign: 'center'
     },
-    description:{
-        fontSize: 20,
+    description: {
+        fontSize: 14,
         color: '#000A3E',
         marginBottom: 10,
-        textAlign:'center'
+        textAlign: 'left'
     },
-    priceArea: {
-        width: '60%',
-        padding: 10,
-        borderRadius: 10,
-        backgroundColor: '#ffff',
-        alignItems: 'center',
-        justifyContent: 'center', // Centraliza o conteúdo verticalmente
-        alignSelf: 'center' // Centraliza a área no meio da tela
-    },
-    
-    price:{
+    price: {
         fontSize: 14,
         fontWeight: 'bold',
         textAlign: 'center',
-        color:'#3B83BE'
+        color: '#292929',
+    },
+    btnAdicionar:{
+        width: '100%',
+        height: 50,
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#a53e41',
+    },
+    txtAdicionar:{
+        color: 'white',
+        fontSize: 18,
     }
 
 });

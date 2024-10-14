@@ -10,27 +10,27 @@ export const data: Data = {
     categories: [
         {
             id: 1,
-            title: '',
+            title: 'Vestidos',
             cover: 'https://oqvestir.fbitsstatic.net/media/topo_mobile_categoria_vestidos.jpg?v=202410071841'
         },
         {
             id: 2,
-            title: '',
+            title: 'Camisetas e blusas',
             cover: 'https://1259028l.ha.azioncdn.net/img/2023/07/blog/67490/aposte-em-blusas-femininas.jpg'
         },
         {
             id: 3,
-            title: '',
+            title: 'Saias',
             cover: 'https://acdn.mitiendanube.com/stores/736/370/categories/20210323_004015_0000-2c3ebd7ef0689a7c8516164711880819-240-0.jpg'
         },
         {
             id: 4,
-            title: ' ',
+            title: 'Acessórios ',
             cover: 'https://oqvestir.fbitsstatic.net/media/topo_mobile_categoria_acessorios_feminino.jpg?v=202410071841'
         },
         {
             id: 5,
-            title: '',
+            title: 'Sapatos',
             cover: 'https://oqvestir.fbitsstatic.net/media/topo_mobile_categoria_sapatos_feminino.jpg?v=202410071841'
         },
     ],

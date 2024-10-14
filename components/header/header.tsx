@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from "react-native"
+import { View, Image, Pressable, StyleSheet } from "react-native"
 import { Ionicons, Feather } from '@expo/vector-icons';
 
 export function Header() {
@@ -8,9 +8,12 @@ export function Header() {
                 <Ionicons name="menu" size={24} color='#ffffff' />
             </Pressable>
 
-            <Text style={styles.nameStore}>
-                FancyStyle
-            </Text>
+            <Image 
+            style={styles.imgLogo}
+            source={require('../../assets/logoFancy.png')}
+            >
+                
+            </Image>
 
             <Pressable style={styles.iconMenu}>
                 <Feather name="bell" size={24} color='#ffffff' />
@@ -23,14 +26,13 @@ export function Header() {
 }
 const styles = StyleSheet.create({
     containerHeader: {
-        backgroundColor: '#800080',
+        backgroundColor: '#a53e41',
         width: '100%',
         padding: 8,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        
-        
+                
     },
     iconMenu: {
         width: 40,
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     nameStore:{
-        color: '#ffff00',
+        color: '#f2d8cb',
         fontSize: 16,
     }
 })
