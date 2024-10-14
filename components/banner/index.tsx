@@ -28,6 +28,7 @@ export default function Banner() {
                 resizeMode="cover"
                 />
             </Pressable >
+            
 
             </PagerView>
         </View>

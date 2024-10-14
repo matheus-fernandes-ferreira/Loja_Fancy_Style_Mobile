@@ -4,21 +4,30 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 export default function TabLayout() {
     return (
-        <Tabs>
+        <Tabs
+            screenOptions={{
+                tabBarStyle: {
+                    backgroundColor: 'purple', // Cor de fundo da Tab Bar
+                },
+                tabBarActiveTintColor: 'yellow', // Cor dos ícones ativos
+                tabBarInactiveTintColor: 'white', // Cor dos ícones inativos
+            }}
+        >
             <Tabs.Screen
+
                 name="(home)"
                 options={{
                     title: 'Início',
                     headerShown: false,
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
                 }}
             />
             <Tabs.Screen
                 name="(categories)"
                 options={{
-                    title: 'Categorias',
+                    title: 'Início',
                     headerShown: false,
-                    tabBarIcon: ({ color }) => <Entypo name="grid" size={24} color="black" />
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
                 }}
             />
             <Tabs.Screen

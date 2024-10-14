@@ -15,6 +15,9 @@ export function Header() {
             <Pressable style={styles.iconMenu}>
                 <Feather name="bell" size={24} color='#ffffff' />
             </Pressable>
+            <Pressable style={styles.iconMenu}>
+                <Feather name="shopping-cart" size={24} color='#ffffff' />
+            </Pressable>
         </View>
     )
 }
