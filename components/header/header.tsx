@@ -44,5 +44,8 @@ const styles = StyleSheet.create({
     nameStore:{
         color: '#f2d8cb',
         fontSize: 16,
+    },
+    imgLogo:{
+        
     }
 })
