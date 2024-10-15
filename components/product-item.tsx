@@ -1,7 +1,7 @@
 import { Link } from "expo-router";
 import { Product } from "../types/product"
-import { Pressable, Text, StyleSheet, Image, View } from "react-native";
-
+import { Pressable, Text, StyleSheet, Image, View, TouchableOpacity } from "react-native";
+import {Feather} from '@expo/vector-icons'
 
 type Props = {
     data: Product;
@@ -18,6 +18,7 @@ export const ProductItem = ({ data }: Props) => {
                     resizeMode="cover"
                 />
                 <View style={styles.info}>
+
                     <Text style={styles.title}>{data.title}</Text>
                     <Text style={styles.price}>R$ {data.price.toFixed(2)}</Text>
                 </View>

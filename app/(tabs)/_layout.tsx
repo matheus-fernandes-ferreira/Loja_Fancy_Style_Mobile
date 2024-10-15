@@ -5,6 +5,7 @@ import { Feather } from "@expo/vector-icons";
 
 export default function TabLayout() {
     return (
+        
         <Tabs
             screenOptions={{
                 tabBarStyle: {
@@ -24,7 +25,7 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="(categories)"
+                name="categories"
                 options={{
                     title: 'Categorias',
                     headerShown: false,

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Link } from 'expo-router';
 
 export default function MenuScreen() {
     return (
@@ -25,11 +26,13 @@ export default function MenuScreen() {
                     <Text style={styles.menuText}>Favoritos</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.menuItem}>
-                    <MaterialIcons name="location-on" size={24} color="purple" />
-                    <Text style={styles.menuText}>Endereços</Text>
-                </TouchableOpacity>
-
+                <Link href={'./location'} asChild>
+                    <TouchableOpacity style={styles.menuItem}>
+                        <MaterialIcons name="location-on" size={24} color="purple" />
+                        <Text style={styles.menuText}>Endereços</Text>
+                    </TouchableOpacity>
+                </Link>
+                
                 <TouchableOpacity style={styles.menuItem}>
                     <FontAwesome name="cog" size={24} color="purple" />
                     <Text style={styles.menuText}>Configurações</Text>

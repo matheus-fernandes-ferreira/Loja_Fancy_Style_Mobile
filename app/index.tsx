@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ImageBackground, Pressable, StyleSheet, Text, View, Animated } from "react-native";
+import { ImageBackground, Pressable, StyleSheet, Text, View, Animated, Image } from "react-native";
 import { router, Link } from "expo-router";
 import { useFonts, TenorSans_400Regular } from '@expo-google-fonts/tenor-sans';
 import { useState, useEffect } from "react";
@@ -23,7 +23,7 @@ export default function Screen() {
                 useNativeDriver: false,
             }),
             Animated.timing(opacity, {
-                toValue: 1, 
+                toValue: 1,
                 duration: 2000,
                 useNativeDriver: true, // UseNativeDriver para opacidade
             }),
@@ -54,16 +54,13 @@ export default function Screen() {
                         <Animated.View style={{ opacity: opacity }}>
                             <ImageBackground
                                 source={require('../assets/inicio.jpg')}
-                                style={styles.logo}
+                                style={styles.bg}
                             >
                                 <View style={styles.info}>
-                                    {/* Tudo aqui está dentro de um <Text> */}
-                                    <Text style={styles.h1}>FancyStyle</Text>
-                                    <View style={styles.boxLink}>
-                                        <Text style={styles.comecar}>
-                                            Começar as compras
-                                        </Text>
-                                    </View>
+                                    <Image
+                                    style={styles.logomarca}
+                                    source={require('../assets/logoFancy.png')}
+                                    />
                                 </View>
                             </ImageBackground>
                         </Animated.View>
@@ -102,9 +99,14 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         paddingTop: 30,
     },
-    logo: {
+    bg: {
         width: '100%',
         height: '100%',
+    },
+    logomarca:{
+        width: '50%',
+        marginTop: '60%',
+        marginRight: 15,
     },
     h1: {
         fontSize: 22,
