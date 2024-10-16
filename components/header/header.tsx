@@ -26,7 +26,7 @@ export function Header() {
 }
 const styles = StyleSheet.create({
     containerHeader: {
-        backgroundColor: '#a53e41',
+        backgroundColor: 'purple',
         width: '100%',
         padding: 8,
         flexDirection: 'row',

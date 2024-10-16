@@ -9,9 +9,9 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 tabBarStyle: {
-                    backgroundColor: '#a53e41', // Cor de fundo da Tab Bar
+                    backgroundColor: 'purple', // Cor de fundo da Tab Bar
                 },
-                tabBarActiveTintColor: '#f2d8cb', // Cor dos ícones ativos
+                tabBarActiveTintColor: 'yellow', // Cor dos ícones ativos
                 tabBarInactiveTintColor: 'white', // Cor dos ícones inativos
             }}
         >
@@ -36,6 +36,8 @@ export default function TabLayout() {
                 name="(menu)"
                 options={{
                     title: 'Menu',
+                    headerStyle: { backgroundColor: 'purple' }, // Cor do header (Tomato)
+                    headerTintColor: '#fff', // Cor do texto
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="bars" color={color} />
                 }}
             ></Tabs.Screen>

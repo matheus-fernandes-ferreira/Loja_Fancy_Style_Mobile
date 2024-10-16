@@ -1,10 +1,14 @@
 import { Stack } from "expo-router";
 
-export default function MenuLayout(){
-    return(
-        <Stack screenOptions={{headerShown: false}}>
-            <Stack.Screen name="index"/>
-            <Stack.Screen name="location"/>
+export default function MenuLayout() {
+    return (
+        <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="index"
+                options={{
+                    title: 'Menu',
+                    headerStyle: { backgroundColor: 'purple' }, // Cor do header (Tomato)
+                    headerTintColor: '#fff', // Cor do texto
+                }} />
         </Stack>
     );
 }

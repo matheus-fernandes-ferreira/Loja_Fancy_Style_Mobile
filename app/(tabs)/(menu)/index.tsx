@@ -9,7 +9,6 @@ export default function MenuScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
-                <Text style={styles.title}>Menu</Text>
 
                 <TouchableOpacity style={styles.menuItem}>
                     <FontAwesome name="user" size={24} color="purple" />

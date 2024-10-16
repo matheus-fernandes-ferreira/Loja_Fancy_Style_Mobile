@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         marginBottom: 10,
-        color: '#a53e41',
+        color: 'purple',
         textAlign: 'center'
     },
     description: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
     price: {
-        fontSize: 14,
+        fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
         color: '#292929',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#a53e41',
+        backgroundColor: 'purple',
     },
     txtAdicionar:{
         color: 'white',
