@@ -5,10 +5,10 @@
     "scheme": "FanceStyle",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoFancy.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logoFancy.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,9 +17,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logoFancy.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.matheusfer200.FanceStyle"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -27,7 +28,11 @@
     "plugins": [
       "expo-router",
       "expo-font"
-
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4a236cb4-3e66-4df4-87f9-1855f00912c8"
+      }
+    }
   }
 }
