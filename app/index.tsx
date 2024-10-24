@@ -78,20 +78,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    boxLink: {
-        width: '55%',
-        height: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderWidth: 1,
-        borderRadius: 30,
-        borderColor: 'white',
-    },
-    comecar: {
-        fontSize: 14,
-        color: 'white',
-        textAlign: 'center'
-    },
+
     info: {
         zIndex: 1,
         width: '100%',
@@ -108,12 +95,5 @@ const styles = StyleSheet.create({
         marginTop: '60%',
         marginRight: 15,
     },
-    h1: {
-        fontSize: 22,
-        fontFamily: 'TenorSans_400Regular',
-        fontWeight: 'bold',
-        marginBottom: 10,
-        zIndex: 1,
-        color: 'yellow',
-    },
+
 });

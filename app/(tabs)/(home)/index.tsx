@@ -7,48 +7,22 @@ import { Stack } from "expo-router";
 import { Header } from "../../../components/header/header";
 import Banner from "../../../components/banner";
 import { Search } from "../../../components/search";
+import {TitleBar} from "../../../components/titleBar/index"
 
 export default function Screen() {
-    const allProducts = getAllProducts();
-    const [searchQuery, setSearchQuery] = useState('');
-    const [filteredProducts, setFilteredProducts] = useState(allProducts);
-
-    // Função para filtrar os produtos com base no texto da busca
-    const handleSearch = (query: string) => {
-        setSearchQuery(query);
-
-        // Filtra os produtos pelo título ou descrição
-        const filtered = allProducts.filter(product =>
-            product.title.toLowerCase().includes(query.toLowerCase()) ||
-            product.description.toLowerCase().includes(query.toLowerCase())
-        );
-
-        setFilteredProducts(filtered);
-    };
+    
 
     return (
         <SafeAreaView style={styles.container}>
             <Header />
-            <FlatList
-                ListHeaderComponent={
-                    <View style={{ flex: 1 }} >
-                        {/* banner slide */}
-                        <Banner />
-                        {/* barra de pesquisa */}
-                        <Search
-                            searchQuery={searchQuery}
-                            onSearch={handleSearch}
-                        />
-                    </View>
-                }
-                data={filteredProducts}
-                renderItem={({ item }) => <ProductItem data={item} />}
-                keyExtractor={item => item.id.toString()}
-                numColumns={2}
-                columnWrapperStyle={{ justifyContent: 'space-between', marginBottom: 16 }}
-                style={styles.list}
-                showsVerticalScrollIndicator={false}
-            />
+            <Banner/>
+           <TitleBar
+           title="Novidades"
+           actionText="Ver todos"
+           href="./allProducts"
+
+           />
+
         </SafeAreaView>
     );
 }
