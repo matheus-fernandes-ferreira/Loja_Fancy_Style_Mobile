@@ -36,6 +36,14 @@ export default function MenuScreen() {
                     <FontAwesome name="cog" size={24} color="purple" />
                     <Text style={styles.menuText}>Configurações</Text>
                 </TouchableOpacity>
+
+                <Link href={'./registerProduct'} asChild>
+                    <TouchableOpacity style={styles.menuItem}>
+                        <FontAwesome name="cog" size={24} color="purple" />
+                        <Text style={styles.menuText}>Registrar novo produto</Text>
+                    </TouchableOpacity>
+                </Link>
+
             </ScrollView>
         </SafeAreaView>
     );

@@ -10,5 +10,6 @@ export default function MenuLayout() {
                     headerTintColor: '#fff', // Cor do texto
                 }} />
         </Stack>
+        
     );
 }
