@@ -79,12 +79,12 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
     price: {
-        fontSize: 18,
+        fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
         color: '#292929',
     },
-    btnAdicionar:{
+    btnAdicionar: {
         width: '100%',
         height: 50,
         borderRadius: 8,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'purple',
     },
-    txtAdicionar:{
+    txtAdicionar: {
         color: 'white',
         fontSize: 18,
     }

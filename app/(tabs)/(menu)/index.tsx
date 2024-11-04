@@ -39,7 +39,7 @@ export default function MenuScreen() {
 
                 <Link href={'./registerProduct'} asChild>
                     <TouchableOpacity style={styles.menuItem}>
-                        <FontAwesome name="cog" size={24} color="purple" />
+                        <FontAwesome name="edit" size={24} color="purple" />
                         <Text style={styles.menuText}>Registrar novo produto</Text>
                     </TouchableOpacity>
                 </Link>

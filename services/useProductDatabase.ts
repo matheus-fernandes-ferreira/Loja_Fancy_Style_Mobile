@@ -47,5 +47,16 @@ export function useProductDataBase() {
         }
     }
 
-    return { create, searchByName, getAllProducts };
+    // Função para obter os últimos 5 produtos
+    async function getLastFiveProducts() {
+        try {
+            const query = "SELECT * FROM products ORDER BY id DESC LIMIT 5";
+            const response = await dataBase.getAllAsync<Product>(query);
+            return response;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    return { create, searchByName, getAllProducts, getLastFiveProducts };
 }
