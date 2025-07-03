@@ -49,7 +49,6 @@ Aplicativo mobile desenvolvido com **React Native + Expo** para uma loja de moda
 
 ## 📸 Capturas de Tela
 
-> (Insira aqui imagens do app em funcionamento)
 
-!Apresentacao](1.png)
+![Apresentacao](1.png)
 ![Tela inicial](2.png)
